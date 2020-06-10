@@ -1,9 +1,9 @@
 <template>
 	<!-- 栅格 -->
-	<view :style="diyStyle" class="grid row text-center">
-		<template v-for="(item,index) in data">
-			<view :class="getCol()">
-				<view class="icon">
+	<view :style="initStyle" class="grid row text-center">
+		<template v-for="(item,index) in render">
+			<view :class="getCol">
+				<view @click="openPage(item.page)" class="icon">
 					<view class="img-wrap">
 						<image :src="item.image" mode="aspectFit"></image>
 					</view>
@@ -18,17 +18,30 @@
 	export default {
 		data() {
 			return {
-				
+				initStyle:""
 			}
 		},
 		props:[
-			'gridNum',
-			'diyStyle',
-			'data'
+			'config',
+			'render'
 		],
 		methods:{
-			getCol:function(){
-				const num = Number(this.gridNum)
+			openPage(page = ''){
+				if(page != ''){
+					uni.navigateTo({
+						url:page
+					})
+				}
+			}
+		},
+		mounted() {
+			this.initStyle = `background:${this.config.background};
+							  padding:${this.config.padding};
+							  margin:${this.config.margin};`
+		},
+		computed:{
+			getCol(){
+				const num = Number(this.config.num)
 				switch(num){
 					case 3:
 					return "col-4"
@@ -43,6 +56,9 @@
 					console.log("未定义")
 					break
 				}
+			},
+			getClass(){
+				
 			}
 		}
 	}
@@ -60,6 +76,5 @@
 		font-size: 28rpx;
 		font-weight: bold;
 		color: #333333;
-		margin-top: 20rpx;
 	}
 </style>

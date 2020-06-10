@@ -1,0 +1,81 @@
+
+.my-list .title-wrap {
+	margin-bottom: 30rpx;
+}
+.my-list .title-wrap .title {
+	font-size: 36rpx;
+	font-weight: 600;
+	color: #000;
+}
+.my-list .title-wrap .more {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	color: #999;
+	font-size: 28rpx;
+}
+.my-list .title-wrap .more .iconfont {
+	font-size: 26rpx;
+	line-height: 26rpx;
+}
+.my-list .media {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.my-list .media .img-wrap {
+	width: 240rpx;
+}
+.my-list .media .text-wrap {
+	width: 0;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.my-list .media .text-wrap .content-title {
+	color: #72717a;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.my-list .media .text-wrap .content-desc {
+	font-size: 26rpx;
+	color: #999;
+}
+.my-list .media .text-wrap .price {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	        justify-content: flex-end;
+}
+.my-list .media .text-wrap .price .origin {
+	color: #999;
+	font-size: 32rpx;
+	text-decoration: line-through;
+	margin-right: 20rpx;
+	font-weight: 400;
+}
+.my-list .media .text-wrap .price .current {
+	color: #000;
+	font-size: 32rpx;
+	margin-right: 20rpx;
+	font-weight: bold;
+}
+

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/page/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "码上云",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "permission": {},
+  "usingComponents": {
+    "my-swiper": "/components/swiper/index",
+    "search": "/components/search/index",
+    "grid": "/components/grid/index",
+    "my-list": "/components/list/list"
+  },
+  "sitemapLocation": "sitemap6.json"
+}

@@ -5,23 +5,23 @@
 			<template v-if="item.type == 'swiper'">
 				<my-swiper :indicator-dots="item.config.indicatorDots" :indicator-color="item.config.indicatorColor"
 				 :indicator-active-color="item.config.indicatorActiveColor" :circular="item.config.circular" :autoplay="item.config.autoplay"
-				 :interval="item.config.interval" :duration="item.config.duration" :vertical="item.config.vertical" :data="item.data" />
+				 :interval="item.config.interval" :duration="item.config.duration" :vertical="item.config.vertical" :render="item.data" />
 			</template>
 
 			<!-- 如果是搜索 -->
 			<template v-else-if="item.type == 'search'">
-				<search/>
+				<search />
 			</template>
 
 			<!-- 如果是宫格 -->
 			<template v-else-if="item.type == 'grid'">
-				<grid :style="{backgroundColor: item.config.backgroundColor,paddingBottom:item.config.paddingBottom}" :data="item.data" :grid-num="item.config.num"/>
+				<grid :config="item.config" :render="item.data"/>
 			</template>
 
 			<!-- 如果是列表 -->
 			<template v-else-if="item.type == 'list'">
 				<view class="">
-					我是列表
+					<my-list :config="item.config" :render="item.data"/>
 				</view>
 			</template>
 		</view>
@@ -60,33 +60,46 @@
 					},
 					{
 						type: "search",
-						data: []
+						data: [],
+						config: {
+							background: "#ffffff",
+							padding: "0",
+							margin: "0"
+						}
 					},
 					{
 						type: "grid",
-						data: [
-							{
-								image:"http://www.wxapp.store/attachment/images/2/2019/09/HCHYRzh8zZQg4g0GWuCG94uEG48YwD.svg",
-								name:"听音频"
+						data: [{
+								image: "http://www.wxapp.store/attachment/images/2/2019/09/HCHYRzh8zZQg4g0GWuCG94uEG48YwD.svg",
+								name: "听音频",
+								page: "/pages/page/index?name='听音频'"
 							},
 							{
-								image:"http://www.wxapp.store/attachment/images/2/2019/09/JA55ciluH3egz11izg5K9KUuCgh9H6.svg",
-								name:"看视频"
+								image: "http://www.wxapp.store/attachment/images/2/2019/09/JA55ciluH3egz11izg5K9KUuCgh9H6.svg",
+								name: "看视频",
+								page: "/pages/page/index?name='看shi频'"
 							},
 							{
-								image:"http://www.wxapp.store/attachment/images/2/2019/09/VtK09tc0Qq50KeT8uX028Q9Tz2qKku.svg",
-								name:"读书"
+								image: "http://www.wxapp.store/attachment/images/2/2019/09/VtK09tc0Qq50KeT8uX028Q9Tz2qKku.svg",
+								name: "读书",
+								page: "/pages/page/index?name='读书'"
 							}
 						],
-						config:{
-							backgroundColor:"#ffffff",
-							paddingBottom:"20rpx",
-							num:"3"
+						config: {
+							background: "#ffffff",
+							padding: "0 0 20rpx 0",
+							margin: "0 0 20rpx 0",
+							num: "3"
 						}
 					},
 					{
 						"type": "list",
-						"data": []
+						"data": [],
+						config: {
+							background: "#ffffff",
+							padding: "0",
+							margin: "0 0 20rpx 0"
+						}
 					}
 				]
 			}
@@ -95,7 +108,7 @@
 
 		},
 		methods: {
-
+			
 		}
 	}
 </script>

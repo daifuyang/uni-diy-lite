@@ -1,0 +1,13 @@
+
+.grid .icon .img-wrap {
+	width: 100rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	margin: 0 auto;
+}
+.grid .title {
+	font-size: 28rpx;
+	font-weight: bold;
+	color: #333333;
+}
+

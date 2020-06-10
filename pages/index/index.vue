@@ -50,7 +50,8 @@
 	}
 
 	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+		font-size: 40rpx;
+		color: #2d3230;
+		font-weight: 600;
 	}
 </style>

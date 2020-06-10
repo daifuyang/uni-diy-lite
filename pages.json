@@ -6,6 +6,11 @@
 				"navigationBarTitleText": "码上云"
 			}
 		}
+        ,{
+            "path" : "pages/page/index",
+			"name" : "自定义页面",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

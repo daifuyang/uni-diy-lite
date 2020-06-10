@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['openPage',['$event']]]]]}}" bindtap="__e">{{'我是自定义page页面 当前页面'+name+''}}</view>
