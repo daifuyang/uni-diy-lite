@@ -1,6 +1,7 @@
 <template>
-	<view @click="openPage">
+	<view>
 		我是自定义page页面 当前页面{{name}}
+		<tabBar :render="tabBar" />
 	</view>
 </template>
 
@@ -8,19 +9,20 @@
 	export default {
 		data() {
 			return {
-				name:""
+				name: ""
 			}
 		},
 		onLoad(options) {
-			console.log(Object.keys(options).length );
-			if(Object.keys(options).length > 0 && options.name !== undefined){
+			this.tabBar = getApp().globalData.tabBar;
+			console.log(Object.keys(options).length);
+			if (Object.keys(options).length > 0 && options.name !== undefined) {
 				this.name = options.name
 			}
 		},
 		methods: {
-			openPage(){
+			openPage() {
 				uni.navigateTo({
-					url:"/pages/page/index"
+					url: "/pages/page/index"
 				})
 			}
 		}

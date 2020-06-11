@@ -16,6 +16,5 @@
     "search": "/components/search/index",
     "grid": "/components/grid/index",
     "my-list": "/components/list/list"
-  },
-  "sitemapLocation": "sitemap6.json"
+  }
 }

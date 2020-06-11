@@ -1,25 +1,20 @@
 <template>
-	<my-parse/>
+	<view>
+		<my-parse />
+		<tabBar :render="tabBar" />
+	</view>
 </template>
 
 <script>
-	
-	import myParse from '@/components/myParse.vue'
-	
 	export default {
-		components: {myParse},
 		data() {
 			return {
-				render:[
-					{
-						"type":"swiper",
-						"data":[]
-					}
-				]
+				data: [],
+				tabBar:[]
 			}
 		},
 		onLoad() {
-
+			this.tabBar = getApp().globalData.tabBar
 		},
 		methods: {
 
